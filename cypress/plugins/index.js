@@ -3,10 +3,6 @@
 const Discord = require("discord.js"); // discord.js library
 
 module.exports = (on, config) => {
-  on("before:run", async (details) => {
-    await beforeRunHook(details);
-  });
-
   on("after:run", async (results) => {
     const webhook = new Discord.WebhookClient(
       { url: discordUrl },
